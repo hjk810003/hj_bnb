@@ -1,11 +1,10 @@
+import Layout from './container/Layout';
 import './styles/reset.css';
-import { Header, Footer, Layout } from './components/common';
 
 function App() {
   return (
     <Layout>
-      <Header />
-      <Footer />
+      <div>컨텐츠</div>
     </Layout>
   );
 }
