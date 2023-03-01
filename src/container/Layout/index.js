@@ -1,13 +1,13 @@
 import { Header, Footer } from "../../components/common";
-import { Container } from "./styled";
+import { Wrap, Container } from "./styled";
 
 function Layout({ children }) {
   return (
-    <div>
+    <Wrap>
       <Header />
       <Container>{children}</Container>
       <Footer />
-    </div>
+    </Wrap>
   );
 }
 
