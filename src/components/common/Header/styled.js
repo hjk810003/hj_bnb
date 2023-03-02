@@ -19,20 +19,24 @@ export const Logo = styled.h1`
   color: #000;
 `;
 
-export const IntroBox = styled.ul`
-  min-width: 300px;
+export const IntroTxt = styled.ul`
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
   padding: 10px;
+  background-color: #fff;
   border: 1px solid #ddd;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
   box-sizing: border-box;
-  border-radius: 30px;
+  border-radius: 40px;
 
   li {
-    display: inline-block;
-    width: 33.333%;
+    padding: 5px 10px;
     border-right: 1px solid #ddd;
     box-sizing: border-box;
     color: #000;
-    font-size: 16px;
+    font-size: 14px;
     text-align: center;
 
     &:last-child {
@@ -45,5 +49,12 @@ export const Profile = styled.div`
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: #000;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+    transition: box-shadow 0.2s;
+  }
 `;

@@ -1,12 +1,16 @@
 import Home from './container/Home';
 import Layout from './container/Layout';
-import './styles/reset.css';
+import GlobalStyle from './styles/GlobalStyle';
 
 function App() {
   return (
+    <>
+    <GlobalStyle />
+    
     <Layout>
       <Home/>
     </Layout>
+    </>
   );
 }
 
