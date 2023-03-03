@@ -9,7 +9,7 @@ export const HeaderWrap = styled.header`
   left: 0;
   width: 100%;
   height: 80px;
-  padding: 0 16px;
+  padding: 0 80px;
   background: #fff;
   border-bottom: 1px solid #ddd;
   box-sizing: border-box;
@@ -19,7 +19,7 @@ export const Logo = styled.h1`
   color: #000;
 `;
 
-export const IntroTxt = styled.ul`
+export const Comments = styled.ul`
   display: inline-flex;
   justify-content: center;
   align-items: center;
