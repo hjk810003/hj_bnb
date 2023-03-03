@@ -1,4 +1,3 @@
-import Home from './container/Home';
 import Layout from './container/Layout';
 import GlobalStyle from './styles/GlobalStyle';
 
@@ -7,9 +6,7 @@ function App() {
     <>
     <GlobalStyle />
     
-    <Layout>
-      <Home/>
-    </Layout>
+    <Layout />
     </>
   );
 }

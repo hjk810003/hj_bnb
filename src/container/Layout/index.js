@@ -1,13 +1,22 @@
-import { Header, Footer } from "../../components/common";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Wrap, Container } from "./styled";
+import { Header, Footer } from "../../components/common";
+import { Home, Profile } from "../pages";
 
-function Layout({ children }) {
+function Layout() {
   return (
-    <Wrap>
-      <Header />
-      <Container>{children}</Container>
-      <Footer />
-    </Wrap>
+    <BrowserRouter>
+      <Wrap>
+        <Header />
+        <Container>
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/profile" element={<Profile />}></Route>
+          </Routes>
+        </Container>
+        <Footer />
+      </Wrap>
+    </BrowserRouter>
   );
 }
 

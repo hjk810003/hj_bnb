@@ -1,5 +1,5 @@
-import Item from "../../components/Item";
-import Tab from "../../components/Tab";
+import Item from "../../../components/Item";
+import Tab from "../../../components/Tab";
 
 function Home() {
   return (

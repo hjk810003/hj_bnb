@@ -1,15 +1,20 @@
+import { Link } from "react-router-dom";
 import { HeaderWrap, Logo, IntroTxt, Profile } from "./styled";
 
 function Header() {
   return (
     <HeaderWrap>
-      <Logo>로고</Logo>
+      <Link to="/">
+        <Logo>로고</Logo>
+      </Link>
       <IntroTxt>
         <li>어디든지</li>
         <li>어디든지</li>
         <li>어디든지</li>
       </IntroTxt>
-      <Profile />
+      <Link to="/profile">
+        <Profile />
+      </Link>
     </HeaderWrap>
   );
 }

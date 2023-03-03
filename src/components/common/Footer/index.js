@@ -1,5 +1,11 @@
+import { FooterWrap } from "./styled";
+
 function Footer() {
-  return <footer>푸터</footer>
+  return (
+    <FooterWrap>
+      푸터
+    </FooterWrap>
+  )
 }
 
-export default Footer
+export default Footer;
