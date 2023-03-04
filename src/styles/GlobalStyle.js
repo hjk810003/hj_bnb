@@ -47,6 +47,17 @@ const GlobalStyle = createGlobalStyle`
     a {
         text-decoration: none;
     }
+    img {
+        max-width: 100%;
+    }
+    * {
+        box-sizing: border-box;
+    }
+    button {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
 `;
 
 export default GlobalStyle;

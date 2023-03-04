@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { HeaderWrap, Logo, Comments } from "./styled";
+import { HeaderWrap, Logo, Comments, Profile } from "./styled";
 import LogoImg from "images/logo.png";
 
 function Header() {
@@ -15,7 +15,9 @@ function Header() {
         <li>어디든지</li>
         <li>어디든지</li>
       </Comments>
-      <Link to="/profile">프로필</Link>
+      <Link to="/profile">
+        <Profile />
+      </Link>
     </HeaderWrap>
   );
 }

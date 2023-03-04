@@ -1,5 +1,2 @@
-function Tab() {
-  return <div>탭</div>
-}
-
-export default Tab
+export { default as Tab } from "./Tab";
+export { default as Item } from "./Item";
