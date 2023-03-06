@@ -1,7 +1,7 @@
-import Card from "components/Card";
-import { Tab, Item } from "components/Tab";
-import { CARD_ITEM, TAB_ITEM } from "constants/home";
 import { useState } from "react";
+import { Tab, Item } from "components/Tab";
+import Card from "components/Card";
+import { CARD_ITEM, TAB_ITEM } from "constants/home";
 import { CardBox } from "./styled";
 
 function Home() {
@@ -20,6 +20,7 @@ function Home() {
           />
         ))}
       </Tab>
+
       <CardBox>
         {CARD_ITEM.map((item, index) => {
           return (

@@ -14,18 +14,44 @@ export const TabWrap = styled.div`
 `;
 
 export const TabItem = styled.button`
+  position: relative;
   width: auto;
   height: 100%;
   margin-right: 20px;
   font-size: 14px;
   color: #ddd;
+  transition: all 0.2s ease;
 
   &:last-child {
     margin-right: 0;
   }
 
+  &::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
   &:hover {
     color: #000;
-    border-bottom: 2px solid #ddd;
+
+    &::before {
+      background: #ddd;
+    }
+  }
+
+  &.selected {
+    color: #000;
+
+    &::before {
+      background: #000;
+    }
+  }
+
+  img {
+    margin-right: 5px;
   }
 `;

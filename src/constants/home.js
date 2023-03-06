@@ -7,17 +7,17 @@ export const TAB_ITEM = [
   {
     label: "pc",
     icon: "icon2",
-    name: "피시",
+    name: "PC",
   },
   {
     label: "mobile",
     icon: "icon3",
-    name: "모바일",
+    name: "MOBILE",
   },
   {
-    label: "respon",
+    label: "responsive",
     icon: "icon4",
-    name: "반응형",
+    name: "Responsive",
   },
 ];
 
@@ -40,7 +40,7 @@ export const CARD_ITEM = [
   },
   {
     url: "/",
-    label: "respon",
+    label: "responsive",
     img: "http://placeimg.com/242/242/animals",
     title: "title3",
     day: "2023.01 ~ 2023.02",

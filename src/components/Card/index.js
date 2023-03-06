@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
-import { Info, Img, Title, Item } from "./styled";
+import { Item, Img, Title, Info } from "./styled";
 
-function Card({ title, url, skill, day, img }) {
+function Card({ url, img, title, day, skill }) {
   return (
     <Item>
       <Link to={url}>
         <Img src={img} alt={title} />
         <Title>{title}</Title>
-        <Info>{skill}</Info>
         <Info>{day}</Info>
+        <Info>{skill}</Info>
       </Link>
     </Item>
   );
