@@ -45,15 +45,20 @@ export const Comments = styled.ul`
 `;
 
 export const Profile = styled.div`
-  width: 30px;
-  height: 30px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
-  background-color: #fff;
-  border: 1px solid #ddd;
+  border: 2px solid #ff5a5f;
   cursor: pointer;
+  overflow: hidden;
 
   &:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
     transition: box-shadow 0.2s;
+  }
+
+  img {
+    width: 40px;
+    height: 40px;
   }
 `;
