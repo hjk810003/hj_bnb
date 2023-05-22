@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const ProfileWrap = styled.section`
-  max-width: 1080px;
   padding-top: 40px;
-  padding-left: 120px;
-  padding-right: 120px;
+  @media only screen and (max-width: 359px) {
+    padding-top: 20px;
+  }
 `;
 
 export const Title = styled.h2`
@@ -12,6 +12,10 @@ export const Title = styled.h2`
   font-size: 32px;
   color: rgb(72, 72, 72);
   font-weight: bold;
+  @media only screen and (max-width: 359px) {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
 `;
 
 export const ProfileList = styled.ul`
