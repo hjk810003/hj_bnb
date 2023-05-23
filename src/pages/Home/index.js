@@ -3,6 +3,10 @@ import { Tab, Item } from "components/Tab";
 import Card from "components/Card";
 import { CARD_ITEM, TAB_ITEM } from "constants/home";
 import { CardBox } from "./styled";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { FreeMode } from 'swiper';
+import 'swiper/swiper.min.css';
+import 'swiper/css/free-mode';
 
 function Home() {
   const [label, setLabel] = useState("all");
@@ -10,15 +14,25 @@ function Home() {
   return (
     <>
       <Tab>
-        {TAB_ITEM.map((item) => (
-          <Item
-            key={item.label}
-            onClick={() => setLabel(item.label)}
-            isSelected={item.label === label}
-            icon={item.icon}
-            name={item.name}
-          />
-        ))}
+        <Swiper
+          modules={[FreeMode]}
+          className="tab-swiper"
+          freeMode={true}
+          slidesPerView="auto"
+          spaceBetween={20}
+        >
+          {TAB_ITEM.map((item) => (
+            <SwiperSlide>
+              <Item
+                key={item.label}
+                onClick={() => setLabel(item.label)}
+                isSelected={item.label === label}
+                icon={item.icon}
+                name={item.name}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </Tab>
 
       <CardBox>

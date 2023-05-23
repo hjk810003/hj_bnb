@@ -18,6 +18,15 @@ export const TabWrap = styled.div`
     top: 50px; // header 높이
     padding: 0 20px;
   }
+
+  .tab-swiper {
+    width: 100%;
+    height: 100%;
+
+    .swiper-slide {
+      width: auto !important;
+    }
+  }
 `;
 
 export const TabItem = styled.button`
@@ -26,17 +35,11 @@ export const TabItem = styled.button`
   position: relative;
   width: auto;
   height: 100%;
-  margin-right: 20px;
   font-size: 14px;
   color: #ddd;
   transition: all 0.2s ease;
   @media only screen and (max-width: 359px) {
-    margin-right: 10px;
     font-size: 14px;
-  }
-
-  &:last-child {
-    margin-right: 0;
   }
 
   &::before {
