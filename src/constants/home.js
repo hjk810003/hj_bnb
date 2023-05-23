@@ -1,24 +1,26 @@
-import { BiMap } from "react-icons/bi";
+import { AiTwotoneAppstore } from "react-icons/ai";
+import { BiDesktop, BiMobileAlt } from "react-icons/bi";
+import { DiResponsive } from "react-icons/di";
 
 export const TAB_ITEM = [
   {
     label: "all",
-    icon: <BiMap />,
+    icon: <AiTwotoneAppstore className="tab-icon" fontSize={15} />,
     name: "전체보기",
   },
   {
     label: "pc",
-    icon: "icon2",
+    icon: <BiDesktop className="tab-icon" fontSize={20} />,
     name: "PC",
   },
   {
     label: "mobile",
-    icon: "icon3",
+    icon: <BiMobileAlt className="tab-icon" fontSize={20} />,
     name: "MOBILE",
   },
   {
     label: "responsive",
-    icon: "icon4",
+    icon: <DiResponsive className="tab-icon" fontSize={30} />,
     name: "Responsive",
   },
 ];

@@ -21,6 +21,8 @@ export const TabWrap = styled.div`
 `;
 
 export const TabItem = styled.button`
+  display: flex;
+  align-items: center;
   position: relative;
   width: auto;
   height: 100%;
@@ -62,7 +64,7 @@ export const TabItem = styled.button`
     }
   }
 
-  img {
+  .tab-icon {
     margin-right: 5px;
   }
 `;
