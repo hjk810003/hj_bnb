@@ -42,20 +42,19 @@ export const MapArea = styled.div`
   box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
   border-radius: 40px;
   @media only screen and (max-width: 767px) {
-    position: absolute;
-    right: 80px;
-    top: 50%;
-    transform: translateY(-50%);
+    position: fixed;
+    bottom: 140px;
+    left: 50%;
+    transform: translateX(-50%);
     height: auto;
     padding: 0;
     border: none;
-    box-shadow: none;
   }
   @media only screen and (max-width: 359px) {
-    right: 55px;
+    bottom: 40px;
   }
 
-  span {
+  > span {
     padding: 5px 10px;
     border-right: 1px solid #ddd;
     color: #000;
@@ -70,19 +69,36 @@ export const MapArea = styled.div`
     }
   }
 
-  .ic-search {
+  .btn-map {
+    display: flex;
+    align-items: center;
     width: 32px;
     height: 32px;
     border-radius: 50%;
     background-color: rgb(255, 56, 92);
-    @media only screen and (max-width: 359px) {
-    width: 30px;
-    height: 30px;
-  }
+    @media only screen and (max-width: 767px) {
+      width: auto;
+      padding: 0 15px;
+      border-radius: 40px;
+    }
 
     span {
       font-size: 0;
       text-indent: -9999px;
+      @media only screen and (max-width: 767px) {
+        margin-right: 5px;
+        font-size: 12px;
+        color: #fff;
+        text-indent: 0;
+      }
+    }
+
+    .ic-map {
+      font-size: 20px;
+      color: #fff;
+      @media only screen and (max-width: 767px) {
+        font-size: 18px;
+      }
     }
   }
 `;

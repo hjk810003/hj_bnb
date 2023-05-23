@@ -1,7 +1,9 @@
+import { BiMap } from "react-icons/bi";
+
 export const TAB_ITEM = [
   {
     label: "all",
-    icon: "icon1",
+    icon: <BiMap />,
     name: "전체보기",
   },
   {
