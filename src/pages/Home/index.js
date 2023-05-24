@@ -15,11 +15,11 @@ function Home() {
     <>
       <TabBox>
         <Swiper
-          modules={[FreeMode]}
           className="tab-swiper"
-          freeMode={true}
           slidesPerView="auto"
-          spaceBetween={20}
+          spaceBetween={30}
+          freeMode={true}
+          modules={[FreeMode]}
         >
           {TAB_ITEM.map((item) => (
             <SwiperSlide key={item.label}>

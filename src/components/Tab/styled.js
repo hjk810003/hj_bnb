@@ -6,6 +6,7 @@ export const TabItem = styled.button`
   position: relative;
   width: auto;
   height: 100%;
+  padding: 0;
   font-size: 14px;
   color: #ddd;
   transition: all 0.2s ease;

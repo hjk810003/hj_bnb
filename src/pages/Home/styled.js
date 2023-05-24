@@ -29,7 +29,7 @@ export const TabBox = styled.div`
     .swiper-slide {
       width: auto !important;
       @media only screen and (max-width: 359px) {
-        margin-right: 6px !important;
+        margin-right: 15px !important;
       }
     }
   }
