@@ -8,7 +8,7 @@ export const HeaderWrap = styled.header`
   top: 0;
   left: 0;
   width: 100%;
-  height: 80px;
+  height: 80px; // header 높이
   padding: 0 80px;
   background: #fff;
   border-bottom: 1px solid #ddd;
@@ -17,7 +17,7 @@ export const HeaderWrap = styled.header`
     padding: 0 40px;
   }
   @media only screen and (max-width: 359px) {
-    height: 50px;
+    height: 50px; // header 높이
     padding: 0 20px;
   }
 `;
@@ -43,15 +43,12 @@ export const MapArea = styled.div`
   border-radius: 40px;
   @media only screen and (max-width: 767px) {
     position: fixed;
-    bottom: 140px;
+    bottom: 80px;
     left: 50%;
     transform: translateX(-50%);
     height: auto;
     padding: 0;
     border: none;
-  }
-  @media only screen and (max-width: 359px) {
-    bottom: 40px;
   }
 
   > span {

@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Tab, Item } from "components/Tab";
+import Tab from "components/Tab";
 import Card from "components/Card";
+import { TabBox, CardBox } from "./styled";
 import { CARD_ITEM, TAB_ITEM } from "constants/home";
-import { CardBox } from "./styled";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode } from 'swiper';
 import 'swiper/swiper.min.css';
@@ -13,7 +13,7 @@ function Home() {
 
   return (
     <>
-      <Tab>
+      <TabBox>
         <Swiper
           modules={[FreeMode]}
           className="tab-swiper"
@@ -22,9 +22,8 @@ function Home() {
           spaceBetween={20}
         >
           {TAB_ITEM.map((item) => (
-            <SwiperSlide>
-              <Item
-                key={item.label}
+            <SwiperSlide key={item.label}>
+              <Tab
                 onClick={() => setLabel(item.label)}
                 isSelected={item.label === label}
                 icon={item.icon}
@@ -33,7 +32,7 @@ function Home() {
             </SwiperSlide>
           ))}
         </Swiper>
-      </Tab>
+      </TabBox>
 
       <CardBox>
         {CARD_ITEM.map((item, index) => {

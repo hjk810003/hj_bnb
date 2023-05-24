@@ -1,2 +1,11 @@
-export { default as Tab } from "./Tab";
-export { default as Item } from "./Item";
+import { TabItem } from "./styled";
+
+function Tab({ icon, name, onClick, isSelected }) {
+  return (
+    <TabItem onClick={onClick} className={isSelected ? "selected" : ""}>
+      {icon} {name}
+    </TabItem>
+  );
+}
+
+export default Tab;

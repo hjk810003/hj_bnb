@@ -1,34 +1,5 @@
 import styled from "styled-components";
 
-export const TabWrap = styled.div`
-  position: fixed;
-  top: 80px; // header 높이
-  left: 0;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 78px;
-  padding: 0 80px;
-  box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
-  background: #fff;
-  @media only screen and (max-width: 767px) {
-    padding: 0 40px;
-  }
-  @media only screen and (max-width: 359px) {
-    top: 50px; // header 높이
-    padding: 0 20px;
-  }
-
-  .tab-swiper {
-    width: 100%;
-    height: 100%;
-
-    .swiper-slide {
-      width: auto !important;
-    }
-  }
-`;
-
 export const TabItem = styled.button`
   display: flex;
   align-items: center;
@@ -39,7 +10,7 @@ export const TabItem = styled.button`
   color: #ddd;
   transition: all 0.2s ease;
   @media only screen and (max-width: 359px) {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   &::before {

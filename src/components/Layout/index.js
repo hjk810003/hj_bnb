@@ -1,5 +1,5 @@
-import { Wrap, Container } from "./styled";
-import { Header, Footer } from "../common";
+import { Wrap } from "./styled";
+import { Header, Container, Footer } from "../common";
 
 function Layout({ children }) {
   return (

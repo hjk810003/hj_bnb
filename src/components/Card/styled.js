@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Item = styled.div`
+export const CardItem = styled.div`
   display: inline-block;
   width: calc(25% - 30px);
   margin: 0 15px;
