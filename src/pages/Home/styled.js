@@ -8,30 +8,16 @@ export const TabBox = styled.div`
   align-items: center;
   width: 100%;
   height: 78px;
+  padding-left: 80px;
   box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
   background: #fff;
+  @media only screen and (max-width: 767px) {
+    padding-left: 40px;
+  }
   @media only screen and (max-width: 359px) {
     top: 50px; // header 높이
     height: 50px;
-  }
-
-  .tab-swiper {
-    width: 100%;
-    height: 100%;
-    padding: 0 80px;
-    @media only screen and (max-width: 767px) {
-      padding: 0 40px;
-    }
-    @media only screen and (max-width: 359px) {
-      padding: 0 20px;
-    }
-
-    .swiper-slide {
-      width: auto !important;
-      @media only screen and (max-width: 359px) {
-        margin-right: 15px !important;
-      }
-    }
+    padding-left: 20px;
   }
 `;
 

@@ -1,43 +1,26 @@
-import { useState } from "react";
-import Tab from "components/Tab";
-import Card from "components/Card";
-import { TabBox, CardBox } from "./styled";
-import { CARD_ITEM, TAB_ITEM } from "constants/home";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { FreeMode } from 'swiper';
-import 'swiper/swiper.min.css';
-import 'swiper/css/free-mode';
+import { useState } from 'react';
+import Tab from 'components/Tab';
+import Card from 'components/Card';
+import { TabBox, CardBox } from './styled';
+import { CARD_ITEM, TAB_ITEM } from 'constants/home';
 
 function Home() {
-  const [label, setLabel] = useState("all");
+  const [label, setLabel] = useState('all');
+
+  const onChangeLabel = (label) => {
+    setLabel(label);
+  };
 
   return (
     <>
       <TabBox>
-        <Swiper
-          className="tab-swiper"
-          slidesPerView="auto"
-          spaceBetween={30}
-          freeMode={true}
-          modules={[FreeMode]}
-        >
-          {TAB_ITEM.map((item) => (
-            <SwiperSlide key={item.label}>
-              <Tab
-                onClick={() => setLabel(item.label)}
-                isSelected={item.label === label}
-                icon={item.icon}
-                name={item.name}
-              />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        <Tab items={TAB_ITEM} label={label} onClick={onChangeLabel} />
       </TabBox>
 
       <CardBox>
         {CARD_ITEM.map((item, index) => {
           return (
-            (item.label === label || label === "all") && (
+            (item.label === label || label === 'all') && (
               <Card
                 key={index}
                 title={item.title}
