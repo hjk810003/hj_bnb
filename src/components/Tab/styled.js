@@ -43,6 +43,7 @@ export const TabItem = styled(SwiperSlide)`
   font-size: 14px;
   color: #ddd;
   transition: all 0.2s ease;
+  cursor: pointer;
   @media only screen and (max-width: 359px) {
     margin-right: 15px !important;
     font-size: 12px;
