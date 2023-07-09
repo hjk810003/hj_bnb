@@ -1,14 +1,14 @@
-import { Wrap } from "./styled";
-import { Header, Container, Footer } from "../common";
+import { Wrap, ContainerWrap } from './styled';
+import { Header, Footer } from '../common';
 
 function Layout({ children }) {
-  return (
-    <Wrap>
-      <Header />
-      <Container>{children}</Container>
-      <Footer />
-    </Wrap>
-  );
+	return (
+		<Wrap>
+			<Header />
+			<ContainerWrap>{children}</ContainerWrap>
+			<Footer />
+		</Wrap>
+	);
 }
 
 export default Layout;

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import SwiperCore, { FreeMode } from 'swiper';
 import { TabSwiper, TabItem } from './styled';
+import { Inner } from 'styles/common';
 
 SwiperCore.use([FreeMode]);
 
@@ -11,7 +12,6 @@ function Tab({ items, label, onClick }) {
 		onSwiper: setSwiper,
 		slidesPerView: 'auto',
 		freeMode: true,
-		spaceBetween: 30,
 	};
 
 	const onClickHandler = (itemLabel) => {
@@ -21,17 +21,19 @@ function Tab({ items, label, onClick }) {
 	};
 
 	return (
-		<TabSwiper {...params}>
-			{items.map((item) => (
-				<TabItem
-					key={item.label}
-					className={item.label === label ? 'selected' : ''}
-					onClick={() => onClickHandler(item.label)}
-				>
-					{item.icon} {item.name}
-				</TabItem>
-			))}
-		</TabSwiper>
+		<Inner>
+			<TabSwiper {...params}>
+				{items.map((item) => (
+					<TabItem
+						key={item.label}
+						onClick={() => onClickHandler(item.label)}
+						$selected={item.label === label}
+					>
+						{item?.icon} {item.name}
+					</TabItem>
+				))}
+			</TabSwiper>
+		</Inner>
 	);
 }
 

@@ -1,7 +1,8 @@
 import axios from 'axios';
 import { useState } from 'react';
+import { ContactForm, Input, SubmitBtn, ButtonBox } from './styled';
 
-function Form() {
+function Contact() {
 	const [isLoading, setIsLoading] = useState(false);
 	// 인풋 데이터를 담을 state 생성
 	const [values, setValues] = useState({
@@ -50,31 +51,34 @@ function Form() {
 	if (isLoading) return <span>로딩중!!</span>;
 
 	return (
-		<form onSubmit={onSubmit}>
-			<input
+		<ContactForm onSubmit={onSubmit}>
+			<Input
 				type='text'
 				value={name}
 				name='name'
 				placeholder='name'
 				onChange={onChange}
 			/>
-			<input
+			<Input
 				type='text'
 				value={email}
 				onChange={onChange}
 				name='email'
 				placeholder='email'
 			/>
-			<input
+			<Input
 				type='text'
 				value={message}
 				onChange={onChange}
 				name='message'
 				placeholder='message'
 			/>
-			<button type='submit'>전송</button>
-		</form>
+
+			<ButtonBox>
+				<SubmitBtn type='submit'>전송</SubmitBtn>
+			</ButtonBox>
+		</ContactForm>
 	);
 }
 
-export default Form;
+export default Contact;
